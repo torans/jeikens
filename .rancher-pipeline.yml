@@ -1,0 +1,15 @@
+stages:
+- name: docker
+  steps:
+  - runScriptConfig:
+      image: nginx
+      shellScript: CMD ["/usr/bin/supervisord"]
+timeout: 60
+notification:
+  recipients:
+  - recipient: 冉俊
+    notifier: c-dgnrz:n-wzpfw
+  condition:
+  - Success
+  - Changed
+  - Failed
