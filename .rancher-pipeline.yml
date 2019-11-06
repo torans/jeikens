@@ -1,12 +1,12 @@
 stages:
 - name: docker
   steps:
-  - runScriptConfig:
-      image: nginx
-      shellScript: |-
-        #!/bin/bash -ilex
-        echo "ok!"
-- name: deploy
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: torans/test
+      registry: 127.0.0.1:34369
+- name: deployment
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
