@@ -4,7 +4,7 @@ stages:
   - runScriptConfig:
       image: nginx
       shellScript: |-
-        #!/bin/bash
+        #!/bin/bash -ilex
         /usr/bin/supervisord
 timeout: 60
 notification:
