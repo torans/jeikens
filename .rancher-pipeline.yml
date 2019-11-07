@@ -13,8 +13,8 @@ stages:
 timeout: 60
 notification:
   recipients:
-  - recipient: 冉俊
-    notifier: c-dgnrz:n-wzpfw
+  - recipient: '#集群消息'
+    notifier: c-dgnrz:n-lp888
   condition:
   - Success
   - Changed
